@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Upload App</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 0;
+            padding: 0;
+
+        }
+        h1{
+            font-size: 30px;
+            height: 40px;
+            color: aqua;
+            margin: 10px;
+            padding: 10px;
+
+        }
+        a{
+            font-size: 20px;
+            position: absolute;
+            top: 23px;
+            right: 40px;
+            background-color: green;
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: aqua;
+            font-style: bold;
+
+        }
+        .video{
+            margin: 10px;
+            padding: 0px;
+        }
+        video{
+            margin: 5px;
+            padding: 0;
+            border: 2px solid aqua;
+        }
+
+    </style>
+    <style>
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+        
+            a {
+                font-size: 0.9rem;
+                padding: 6px 10px;
+            }
+        
+            video {
+                width: 95%;
+                max-width: 600px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+        
+            a {
+                font-size: 0.8rem;
+                padding: 5px 8px;
+            }
+        
+            video {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1> Videos</h1>
+    <a href="/upload"> + Upload</a>
+
+    <div class="video">
+        <% videos.forEach(video => { %>
+            <video width="320" height="240" controls>
+                <source src="<%= video.video_path %>" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        <% }); %>
+    </div>
+</body>
+</html>

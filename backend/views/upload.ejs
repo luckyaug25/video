@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+
+        }
+        h1{
+            font-size: 30px;
+            height: 40px;
+            color: aqua;
+            margin: 10px;
+            padding: 10px;
+
+        }
+        a{
+            font-size: 20px;
+            position: absolute;
+            top: 23px;
+            right: 40px;
+            background-color: green;
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: aqua;
+            font-style: bold;
+
+        }
+        .form{
+            margin: 10px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        form{
+            height: 500px;
+            width: 90%;
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            right: 20px;
+            color: aliceblue;
+            margin: 5px;
+            padding: 0;
+            border: 2px solid aqua;
+        }
+        input{
+            background-color: aqua;
+            color: black;
+            height: 60px;
+            width: 200px;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid white;
+
+        }
+        button{
+            height: 30px;
+            width: 70px;
+            background-color: green;
+            text-decoration: none;
+            color: aqua;
+            border: 2px solid white;
+        }
+
+
+    </style>
+    <style>
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+        
+            a {
+                font-size: 0.9rem;
+                padding: 6px 10px;
+            }
+        
+            form {
+                width: 95%;
+            }
+        
+            input {
+                width: 100%;
+                max-width: 250px;
+                font-size: 0.9rem;
+            }
+        
+            button {
+                width: 100px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+        
+            a {
+                font-size: 0.8rem;
+                padding: 5px 8px;
+            }
+        
+            form {
+                width: 100%;
+                padding: 15px;
+            }
+        
+            input {
+                max-width: 200px;
+                height: 45px;
+                font-size: 0.8rem;
+            }
+        
+            button {
+                width: 90px;
+                height: 35px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload</h1>
+    <a href="/">Back to Home</a>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data" class="form">
+        <input type="file" name="video" accept="video/mp4" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
