@@ -5,10 +5,9 @@ const path = require("path");
 require("dotenv").config();
 
 const router = express.Router();
-
 // PostgreSQL Database Connection
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: "postgresql://neondb_owner:npg_zI4RYBSV2mOJ@ep-orange-king-a86f8wca-pooler.eastus2.azure.neon.tech/neondb?sslmode=require",
   ssl: { rejectUnauthorized: false },  // Required for NeonDB
 });
 
